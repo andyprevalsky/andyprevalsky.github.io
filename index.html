@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andy Prevalsky</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  @page {
+    margin: 0.4in 0.5in;
+    size: letter;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #1a1a1a;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    color: #0a0a0a;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #555;
+    flex-wrap: wrap;
+  }
+
+  .contact a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  .contact .sep {
+    color: #ccc;
+  }
+
+  /* Sections */
+  h2 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+    border-bottom: 1.5px solid #e5e5e5;
+    padding-bottom: 6px;
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+
+  /* Job entries */
+  .entry {
+    margin-bottom: 16px;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+
+  .entry-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a0a0a;
+  }
+
+  .entry-title .company {
+    color: #0a0a0a;
+  }
+
+  .entry-title .role {
+    color: #444;
+    font-weight: 500;
+  }
+
+  .entry-date {
+    font-size: 12.5px;
+    color: #777;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  ul {
+    margin-left: 18px;
+    color: #333;
+  }
+
+  li {
+    margin-bottom: 3px;
+    line-height: 1.5;
+  }
+
+  li::marker {
+    color: #ccc;
+  }
+
+  b {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  /* Education */
+  .edu-detail {
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px;
+  }
+
+  /* Print styles */
+  @media print {
+    body {
+      padding: 0;
+      font-size: 12px;
+    }
+    h1 { font-size: 28px; }
+    h2 { margin-top: 18px; margin-bottom: 10px; }
+    .entry { margin-bottom: 12px; }
+    a { color: #2563eb !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Andy Prevalsky</h1>
+  <div class="contact">
+    <a href="mailto:andy@roselabs.ai">andy@roselabs.ai</a>
+    <span class="sep">/</span>
+    <a href="https://linkedin.com/in/andyprevalsky">linkedin.com/in/andyprevalsky</a>
+    <span class="sep">/</span>
+    <a href="https://roselabs.ai">roselabs.ai</a>
+  </div>
+</div>
+
+<h2>Experience</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Rose Labs</span> <span class="role">Founder &amp; CEO</span></div>
+    <span class="entry-date">Oct 2025 - Present</span>
+  </div>
+  <ul>
+    <li>Building generalizable <b>mass agent networks</b>. Architected a custom harness that recursively decomposes any task into parallelizable sub-agent workflows, enabling infinite agent scale with <b>Temporal</b>, auto-scaling, and fault-tolerant orchestration</li>
+    <li>Fine-tuned <b>Rose-Decompose</b>, a task decomposition model trained on 500 real user tasks, achieving <b>85.6% pass rate</b> vs. Claude Opus 4.6's 63.8% and <b>45x higher success rate</b> on deep recursive plans by producing mutually exclusive, collectively exhaustive, complexity-reducing sub-task trees</li>
+    <li>Extensive <b>context engineering</b>. Designed systems for efficient context compression, memory management, and communication architectures across large-scale multi-agent execution</li>
+    <li>Built <b>cloud data syncs</b> replicating local computer context (browser state, credentials, file systems, messaging clients, social network data) to enable cloud agents to operate with full user context</li>
+    <li>Developed a comprehensive suite of real-world agent tools: <b>SOTA browser agent</b> interleaving multiple model providers, phone calling, SMS &amp; email, wait-for primitives, explore agents, and recursive sub-agents with graceful error handling and fallbacks</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Vapi</span> <span class="role">Staff Software Engineer</span></div>
+    <span class="entry-date">2024 - 2025</span>
+  </div>
+  <ul>
+    <li>Rebuilt core <b>voice generation pipeline</b> for a leading voice AI infrastructure company</li>
+    <li>Designed and white-papered a <b>multi-LLM system to reduce customer onboarding from 6 months to 30 minutes</b>: generated synthetic personas from existing call decision trees with hidden output-node labels, deployed a shepherd LLM to classify and route callers, and a meta LLM to reflect on runs and iteratively tune the shepherd's prompts</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Hotplate</span> <span class="role">Co-Founder &amp; CTO</span></div>
+    <span class="entry-date">2019 - 2023</span>
+  </div>
+  <ul>
+    <li>Grew Hotplate, a Shopify for Chefs, to over <b>$1 million in monthly transactions</b> and over <b>$50k monthly revenue</b>; raised over <b>$3 million in funding</b> from <b>YC (S20)</b>, <b>Connie Chan (GP @ A16Z)</b>, and <b>Michael Seibel</b></li>
+    <li><b>Head of product</b>, scaled to a 98% monthly retention rate for businesses with over $10k MRR &amp; developed a system with better transactions per second per user than Shopify &amp; Square</li>
+    <li><b>Head of distribution</b>, reverse engineered Instagram's APIs and built an <b>ML pipeline</b> to scan accounts, identify target market via breadth-first search, generating over 90% of user base</li>
+    <li>Sole developer for first 2.5 years, scaled engineering team to 4</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Meta</span> <span class="role">ML/AI Intern (Accepted, declined for YC)</span></div>
+    <span class="entry-date">May 2020</span>
+  </div>
+  <ul>
+    <li>Accepted for ML/AI internship at Meta; declined offer to pursue YC-backed startup (Hotplate)</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Google</span> <span class="role">Software Engineering Intern</span></div>
+    <span class="entry-date">Feb 2020 - May 2020</span>
+  </div>
+  <ul>
+    <li>Sole developer creating a <b>Flutter &amp; React Native Plugin</b> for Google's ML Kit, using Objective C, Javascript, &amp; Dart</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title"><span class="company">Attended The University of Texas at Austin</span></div>
+    <span class="entry-date">Aug 2017 - May 2020</span>
+  </div>
+  <div class="edu-detail">Computer Engineering and Math</div>
+</div>
+
+</body>
+</html>
